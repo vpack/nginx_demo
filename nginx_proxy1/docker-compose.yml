@@ -1,0 +1,25 @@
+version: "3"
+services:
+  proxy: 
+    image: nginx:1.13.1-alpine
+    ports:
+      - "80:80"
+    networks:
+      - webnet
+
+  blue: 
+    image: nginx:1.13.1-alpine
+    ports:
+      - 80
+    networks:
+      - webnet
+
+  green: 
+    image: nginx:1.13.1-alpine
+    ports:
+      - 80
+    networks:
+      - webnet
+
+networks:
+  webnet:
