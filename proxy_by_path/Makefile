@@ -15,7 +15,7 @@ cp:
 bash:
 	docker exec -it $(PROJECT)_proxy_1 ash
 ps:
-	docker ps | grep 
+	docker ps | grep $(PROJECT)_
 
 test:
 	curl -v -H "HOST: proxy.me" http://localhost/green/green.html
